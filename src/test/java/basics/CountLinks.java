@@ -18,6 +18,8 @@ public class CountLinks {
 		driver.get("https://www.facebook.com/");
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 		List<WebElement> links = driver.findElements(By.tagName("a"));
+		//					or
+		//List<WebElement> links = driver.findElements(By.xpath("//a"));
 		System.out.println(links.size());
 		Assert.assertEquals(links.size(), 58);
 		driver.close();

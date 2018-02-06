@@ -18,6 +18,7 @@ public class Windows {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(".//a[contains(text(),'Register for NetBanking')]")).click();
 		Set<String> windows = driver.getWindowHandles();
+
 		Iterator<String> it = windows.iterator();
 		String pwindow = it.next();
 		String cwindow=it.next();
