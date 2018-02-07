@@ -10,7 +10,7 @@
   <test name="Regression">
   
    <classes>
-      <class name="basics.RetryTest"/>
+      <class name="basics.Alert"/>
     </classes>
   </test> 
   
