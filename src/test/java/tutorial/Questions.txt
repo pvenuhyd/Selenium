@@ -1,0 +1,222 @@
+Q.public static void main(String[] ar)
+
+A.public
+  ------
+
+It means that you can call this method from outside of the class you are currently in. This is necessary because this method is being called by the Java runtime system which is not located in your current class.
+
+static
+------
+
+When the JVM makes call to the main method there is no object existing for the class being called therefore it has to have static method to allow invocation from class.
+
+void
+-----
+
+Java is platform independent language and if it will return some value then the value may mean different things to different platforms. Also there are other ways to exit the program on a multithreaded system. Detailed explaination.
+
+main
+-----
+
+It's just the name of method. This name is fixed and as it's called by the JVM as entry point for an application.
+
+String args[]
+--------------
+
+These are the arguments of type String that your Java application accepts when you run it.
+
+Q. Can use private access modifier inside the interface
+
+A. No
+   (Inner class) Top level classes can only have public or default access, but internal classes can have private access
+
+Q.what is the base class for finalise method
+
+A. protected void finalize()throws Throwable
+
+Q.what is difference between final ,finals,finalise
+
+A.As far as my understanding goes finalize() and GC are two different aspects. GC uses finalize() method to free Object memory. We cannot state when GC will occur(even if we explicitly call System.gc()). But we can explicitly call finalize() on an Object.
+
+Q.Difference between array & arraylist
+
+Q.Implicit wait, Explicit wait and Fluent wait
+
+Q.How to get number of elements in Dropdown
+
+A.//To count the number of options
+
+ Select dropDown = new Select(driver.findElement(By.id("ddlTablePay")));
+ List<WebElement> elementCount = dropDown.getOptions();
+ System.out.println("Number of items: " + elementCount.size());
+
+//To get and print all the Options
+
+Select dropDown = new Select(driver.findElement(By.id("ddlTablePay")));
+        List <WebElement> elementCount = dropDown.getOptions();
+        int itemSize = elementCount.size();
+        for(int i = 0; i < itemSize ; i++){
+            String optionsValue = elementCount.get(i).getText();
+            System.out.println(optionsValue);
+        }
+
+
+CSS locators
+-------------
+
+or - div[id='slider_row'],[class='row']
+
+and - div[id='slider_row'][class='row']
+
+sibling - div[id='fb-root']+div+div
+
+hierarchy - div[class='clearfix']>div:nth-child(4)>div:nth-child(2)
+
+Xpath
+------
+
+//div[@id='facebook_block' and @class='col-xs-4']
+
+//div[@id='facebook_block' or @class='col-xs-4']
+
+
+
+WebDriver is an Interface. All browser classes implements the methods in WebDriver Interface
+WebElement web=driver.findElement(By.xpath("//*[@id='myModal']/div/div/div[2]/form/div/div[10]/div/button[1]"));
+boolean bool=web.isDisplayed();
+Assert.assertEquals(true, bool); 
+		
+https://the-internet.herokuapp.com/
+1. jxl supports for Microsoft Excel
+    it supports for office 97-2003 (xls) format
+    supports either read / write only one at a time
+
+2. POI --Apache
+      HSSF (Horrible SpreadSheet Format) – reads and writes Microsoft Excel (XLS) format files.
+      XSSF (XML SpreadSheet Format) – reads and writes Office Open XML (XLSX) format file
+      supports both read and write at a time in excel file
+      supports for xlsx formats(office 97 and also for 2007)
+
+- A trunk in SVN is main development area, where major development happens.
+- A branch in SVN is sub development area where parallel development on different functionalities happens. After completion of a functionality, a branch is usually merged back into trunk.
+- A tag in SVN is read only copy of source code from branch or tag at any point of time. tag is mostly used to create a copy of released source code for restore and backup.
+
+
+Read more: http://javarevisited.blogspot.com/2013/04/difference-between-trunk-tags-and-branch-svn-cvs-git-scm-subversion.html#ixzz4mjRxNlN9
+
+	
+Selenium WebDriver is becoming part of the W3C standard for all browsers. This means that browsers will now automatically be developed to support Selenium. Meaning further growth of the tool. Also, Selenium is the only tool in the world that is becoming part of the W3C standard for browsers.		
+Note that geckodriver v0.16.0 is only compatible with Selenium 3.4 and greater.
+
+https://seleniumhq.github.io/selenium/docs/api/py/api.html
+https://github.com/SeleniumHQ/selenium/releases
+
+Minimum version of Java required to run Selenium 3 is Java 8+, You would need to use GeckoDriver if you want to run your scripts in Firefox versions greater than 47.0.1. Firefox 47.0.1 and before would not need GeckoDriver
+
+If you have the geckodriver.exe in your PATH variable, you don't need to set the property.
+
+
+Selenium
+---------
+2.53,3.0 - 2016
+3.8      - 2017
+
+Firefox
+--------
+40 - 2015
+66 - 2018
+
+Maven
+-----
+
+3.5.2 - 2017
+
+Chrome
+-------
+50 - 2016
+66 - 2018
+
+Eclipse
+--------
+Luna	25 June 2014	4.4
+Mars	24 June 2015	4.5
+Neon	22 June 2016	4.6
+Oxygen	28 June 2017	4.7
+
+Jenkins
+--------
+
+Minutes	        Yes	0-59	        * , -	
+Hours	        Yes	0-23	        * , -	
+Day of month	Yes	1-31	        * , - ? L W	? L W only in some implementations
+Month	        Yes	1-12 or JAN-DEC	* , -	
+Day of week	Yes	0-6 or SUN-SAT	* , - ? L #	? L W only in some implementations
+Year	        No	1970-2099	* , -	This field is not supported in standard/defaultimplementations.
+
+
+# +------------- minute (0 - 59)
+# ¦ +------------- hour (0 - 23)
+# ¦ ¦ +------------- day of month (1 - 31)
+# ¦ ¦ ¦ +------------- month (1 - 12)
+# ¦ ¦ ¦ ¦ +------------- day of week (0 - 6) (Sunday to Saturday;
+# ¦ ¦ ¦ ¦ ¦                                       7 is also Sunday on some systems)
+# ¦ ¦ ¦ ¦ ¦
+# ¦ ¦ ¦ ¦ ¦
+# * * * * *  command to execute
+
+
+To schedule your build every 5 minutes, this will do the job : */5 * * * * OR H/5 * * * *
+
+To the job every 5min past every hour(5th Minute of every Hour) 5 * * * *
+
+To schedule your build every day at 8h00, this will do the job : 0 8 * * *
+
+To schedule your build for 4, 6, 8, and 10 o’clock PM every day – 0 16,18,20,22 * * *
+
+To schedule your build at 6:00PM and 1 AM every day – 0 1,18 * * *
+
+To schedule your build start daily at morning – 03 09 * * 1-5
+
+To schedule your build start daily at lunchtime – 00 12 * * 1-5
+
+To schedule your build start daily in the afternoon – 00 14 * * 1-5
+
+To schedule your build start daily in the late afternoon – 00 16 * * 1-5
+
+To schedule your build start at midnight – 59 23 * * 1-5 OR @midnight
+
+To run a job on 9.30p.m. (at night) on 3rd of May then I ll write or 21.30 on 3/5/2011 – 21 30 3 5 *
+
+Every fifteen minutes (perhaps at :07, :22, :37, :52) 0 – H/15 * * * *
+
+Every ten minutes in the first half of every hour (three times, perhaps at :04, :14, :24) – H(0-29)/10 * * * *
+
+Once every two hours every weekday (perhaps at 10:38 AM, 12:38 PM, 2:38 PM, 4:38 PM) – H 9-16/2 * * 1-5
+
+Once a day on the 1st and 15th of every month except December – H H 1,15 1-11 *
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
