@@ -1,16 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite">
-<!-- <listeners>
+<listeners>
 <listener class-name="basics.TestListener"></listener>
 </listeners> 
-<listeners>
+<!-- <listeners>
 <listener class-name="basics.RetryListener"></listener>
 </listeners>-->
   <test name="Regression">
   
    <classes>
-      <class name="basics.Alert"/>
+      <class name="basics.Listener"/>
     </classes>
   </test> 
   
