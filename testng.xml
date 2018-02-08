@@ -3,10 +3,10 @@
 <suite name="Suite">
 <!-- <listeners>
 <listener class-name="basics.TestListener"></listener>
-</listeners> -->
+</listeners> 
 <listeners>
 <listener class-name="basics.RetryListener"></listener>
-</listeners>
+</listeners>-->
   <test name="Regression">
   
    <classes>
