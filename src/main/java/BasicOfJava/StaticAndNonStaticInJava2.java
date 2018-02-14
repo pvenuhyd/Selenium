@@ -13,7 +13,7 @@ public class StaticAndNonStaticInJava2 {
 
 	public static void test2() {
        System.out.println(j);
-      // System.out.println(i);
+      //System.out.println(i);
 	}
 
 }

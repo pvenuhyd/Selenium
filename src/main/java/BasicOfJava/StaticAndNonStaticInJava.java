@@ -32,6 +32,7 @@ public class StaticAndNonStaticInJava {
 		System.out.println(obj.i);
 		System.out.println(obj.j);
 		
+		
 		StaticAndNonStaticInJava.test2();
 		StaticAndNonStaticInJava.test4();
 		System.out.println(StaticAndNonStaticInJava.k);
