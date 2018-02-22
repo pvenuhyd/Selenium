@@ -22,8 +22,9 @@ public class DecimalToBinary {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		System.out.println(1%2);
 		DecimalToBinary obj=new DecimalToBinary();
-		obj.binary(21);
+		obj.binary(2);
 		
 		
 	}
