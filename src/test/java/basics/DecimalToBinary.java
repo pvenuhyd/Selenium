@@ -8,6 +8,7 @@ public class DecimalToBinary {
 	
 	ArrayList<Integer> list=new ArrayList<Integer>();
 	
+	
 	public void binary(int number){
 		
 		while(number>0){
@@ -23,8 +24,9 @@ public class DecimalToBinary {
 		// TODO Auto-generated method stub
 		
 		System.out.println(1%2);
+		System.out.println(16%298);
 		DecimalToBinary obj=new DecimalToBinary();
-		obj.binary(2);
+		obj.binary(6);
 		
 		
 	}
